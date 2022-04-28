@@ -49,7 +49,7 @@ console.log('il peso minore è:', pesoMinore);
 
 function print(array){
 
-    document.querySelector('.container').innerHTML = `<h1>La bici più leggera è la ${array.name}, con un peso totale di ${array.kg}`
+    document.querySelector('.container').innerHTML = `<h1>La bici più leggera è la ${aarray.name}, con un peso totale di ${array.kg}`
 
 }
 
