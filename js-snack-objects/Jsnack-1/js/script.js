@@ -10,53 +10,53 @@
 const zucchine = [
     {
         varieta: 'zucchina nera',
-        peso: '120 grammi',
-        lunghezza: '20cm'
+        grammi: 120,
+        centimetri: 20
     },
     {
         varieta: 'zucchina romanesca',
-        peso: '60 grammi',
-        lunghezza: '15cm'
+        grammi: 60,
+        centimetri: 15
     },
     {
         varieta: 'zucchina fiorentino',
-        peso: '90 grammi',
-        lunghezza: '25cm'
+        grammi: 90,
+        centimetri: 25
     },
     {
         varieta: 'zucchina napoletano',
-        peso: '130 grammi',
-        lunghezza: '20cm'
+        grammi: 130,
+        centimetri: 20
     },
     {
         varieta: 'zucchina tonde',
-        peso: '180 grammi',
-        lunghezza: '15cm'
+        grammi: 180,
+        centimetri: 15
     },
     {
         varieta: 'zucchina trombetta',
-        peso: '70 grammi',
-        lunghezza: '17cm'
+        grammi: 70,
+        centimetri: 17
     },
     {
         varieta: 'zucchina patisson',
-        peso: '100 grammi',
-        lunghezza: '23cm'
+        grammi: 100,
+        centimetri: 23
     },
     {
         varieta: 'zucchina giallo',
-        peso: '60 grammi',
-        lunghezza: '15cm'
+        grammi: 60,
+        centimetri: 15
     },
     {
         varieta: 'zucchina friulano',
-        peso: '80 grammi',
-        lunghezza: '20cm'
+        grammi: 80,
+        centimetri: 20
     },
     {
         varieta: 'zucchina crookneck',
-        peso: '120 grammi',
-        lunghezza: '24cm'
+        grammi: 120,
+        centimetri: 24
     }
 ];
 
@@ -68,8 +68,10 @@ scale();
 function scale(){
     let totalWeight = 0;
     
-    for(let x of zucchine) {
-        totalWeight += parseInt(x.peso);
+    for(let zucchina of zucchine) {
+        totalWeight += zucchina.grammi;
+        console.log(zucchina.grammi);
+        console.log(zucchina.grammi)
         // console.log(totalWeight);
     }
     console.log(totalWeight);
