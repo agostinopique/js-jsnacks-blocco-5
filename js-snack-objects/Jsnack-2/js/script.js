@@ -68,10 +68,9 @@ const long = [];
 sortLength();
 
 function sortLength(){
-    let longShort;
-    for (let x of zucchine) {
-        // lightHeavy = (parseInt(x.lunghezza) > 15) ? console.log('lungo', x) : console.log('corto', x);
-        longShort = x.centimetri > 15 ? long.push(x) : short.push(x);
+    for (let zucchina of zucchine) {
+        //(x.lunghezza > 15) ? console.log('lungo', x) : console.log('corto', x);
+        zucchina.centimetri > 15 ? long.push(zucchina) : short.push(zucchina);
     }
 
     
@@ -85,14 +84,14 @@ totalWeight(long);
 
 
 /**
- * 
+ * somma i pesi delle zucchine presenti nei due array
  * @param {array} array 
  */
 function totalWeight(array){
     let weight = 0;
     
-    for(let x of array){
-        weight += x.grammi;
+    for(let element of array){
+        weight += element.grammi;
     }
     return weight;
 }

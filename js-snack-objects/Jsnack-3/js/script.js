@@ -10,7 +10,7 @@ const stringa = 'ciao';
 
 /*
 revertText(stringa);
-function revertText(string){
+function revertText(str){
     return string.split('').reverse().join('');
 }
 
@@ -19,6 +19,6 @@ console.log(revertText(stringa))
 
 
 // Versione con arrow function
-const reverseText = (string) => string.split('').reverse().join('');
+const reverseText = (str) => str.split('').reverse().join('');
 
 console.log(reverseText(stringa));

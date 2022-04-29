@@ -15,53 +15,72 @@ const bicicles = [
     },
     {
         name: 'trailbike',
-        kg: 27
+        kg: 24
     },
     {
         name: 'streetbike',
-        kg: 19
+        kg: 9
     },
     {
         name: 'racebike',
-        kg: 9
+        kg: 7
     }
 ]; 
 
 
-let pesoMinore;
+// let pesoMinore;
 
-for(let bike of bicicles) {
+// for(let bike of bicicles) {
+//     const {kg} = bike;
+
+
+//     console.log(kg);
+
+//     if(pesoMinore === undefined || pesoMinore > kg){
+//         pesoMinore = kg;
+//     }
+
+//     if(bike.kg <= kg){
+//         print(bike);
+//     }
+    
+// }
+
+// console.log('il peso minore è:', pesoMinore);
+
+// function print(array){
+
+//     document.querySelector('.container').innerHTML = `<h1>La bici più leggera è la ${array.name}, con un peso totale di ${array.kg}`
+
+// }
+
+
+// CORREZZIONE
+
+
+let weight = bicicles[0].kg;
+
+let lighterBike = {};
+
+for(let bike of bicicles){
     const {kg} = bike;
-
-
     console.log(kg);
 
-    if(pesoMinore === undefined || pesoMinore > kg){
-        pesoMinore = kg;
+
+    if(weight > bike.kg){
+        weight = bike.kg;
+        lighterBike = bike
     }
-
-    if(bike.kg <= kg){
-        print(bike);
-    }
-    
-}
-console.log('il peso minore è:', pesoMinore);
-
-function print(array){
-
-    document.querySelector('.container').innerHTML = `<h1>La bici più leggera è la ${aarray.name}, con un peso totale di ${array.kg}`
 
 }
 
+printBike(lighterBike)
 
+console.log('Peso minore', weight)
 
+function printBike(bike){
+    const {name, kg} = bike
+    document.querySelector('.container').innerHTML = `<h1>La bici col peso minore é ${name} con un peso di ${kg}!</h1>`
 
-
-
-
-
-
-
-
-
+}
 
